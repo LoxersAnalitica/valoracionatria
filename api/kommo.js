@@ -59,6 +59,23 @@ export default async function handler(req, res) {
                 "name": leadName,
                 "pipeline_id": 13404455,
                 "status_id": 103394623,
+                "custom_fields_values": [
+                    { "field_id": 1205040, "values": [{"value": data.operation || ""}] },
+                    { "field_id": 1205042, "values": [{"value": data.propertyType || ""}] },
+                    { "field_id": 1205044, "values": [{"value": data.address || ""}] },
+                    { "field_id": 1205046, "values": [{"value": parseInt(data.surface) || 0}] },
+                    { "field_id": 1205048, "values": [{"value": String(data.rooms) || ""}] },
+                    { "field_id": 1205050, "values": [{"value": String(data.bathrooms) || ""}] },
+                    { "field_id": 1205052, "values": [{"value": data.floor || ""}] },
+                    { "field_id": 1205054, "values": [{"value": data.condition || ""}] },
+                    { "field_id": 1205056, "values": [{"value": String(data.buildYear) || ""}] },
+                    { "field_id": 1205058, "values": [{"value": data.energyCert || ""}] },
+                    { "field_id": 1205060, "values": [{"value": data.features?.join(', ') || "Ninguna"}] },
+                    { "field_id": 1205062, "values": [{"value": data.views?.join(', ') || "Ninguna"}] },
+                    { "field_id": 1205064, "values": [{"value": data.sunExposure || ""}] },
+                    { "field_id": 1205066, "values": [{"value": data.phone || ""}] },
+                    { "field_id": 1205068, "values": [{"value": data.email || ""}] }
+                ],
                 "_embedded": {
                     "tags": [
                         { "name": "Valoración" },
