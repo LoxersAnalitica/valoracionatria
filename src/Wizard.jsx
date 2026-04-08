@@ -68,8 +68,11 @@ export default function ValuationWizard() {
               </select>
               <label className="amoforms-label">Superficie (m²)</label>
               <input type="number" name="surface" value={formData.surface} onChange={handleInput} required placeholder="Ej: 120" style={{ width: '100%', padding: '14px 10px', marginBottom: '15px', backgroundColor: 'var(--bg-dark)', color: 'var(--text-main)', border: '1px solid var(--border-color)' }} />
-              <label className="amoforms-label">Dirección exacta</label>
-              <input type="text" name="address" value={formData.address} onChange={handleInput} required placeholder="Calle, Número, Ciudad..." style={{ width: '100%', padding: '14px 10px', marginBottom: '25px', backgroundColor: 'var(--bg-dark)', color: 'var(--text-main)', border: '1px solid var(--border-color)' }} />
+              <label className="amoforms-label">Dirección exacta <span style={{ color: '#e74c3c' }}>*</span></label>
+              <input type="text" name="address" value={formData.address} onChange={handleInput} required placeholder="Calle, Número, Barrio, Madrid..." style={{ width: '100%', padding: '14px 10px', marginBottom: '6px', backgroundColor: 'var(--bg-dark)', color: 'var(--text-main)', border: '1px solid var(--border-color)' }} />
+              <p style={{ fontSize: '0.75rem', color: 'var(--accent-gold)', marginBottom: '20px', lineHeight: '1.4', opacity: 0.85 }}>
+                📍 Solo se valorarán viviendas en zonas prime del centro de Madrid: Barrio Salamanca, Chamberí, Recoletos, Retiro, Lista, Guindalera, Ibiza y alrededores.
+              </p>
               <button type="button" onClick={() => { if(formData.surface && formData.address) nextStep(); else alert('Completa la superficie y dirección.'); }} className="amoforms-action-btn">Continuar</button>
             </div>
           )}
