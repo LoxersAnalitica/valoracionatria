@@ -41,7 +41,7 @@ export default function ValuationWizard() {
   if (status === 'success') return (
     <div style={{ padding: '3rem 1rem', textAlign: 'center' }}>
       <h3 style={{ color: 'var(--accent-gold)', fontFamily: 'var(--font-serif)', fontSize: '1.6rem', marginBottom: '1rem' }}>¡Solicitud enviada!</h3>
-      <p style={{ color: 'var(--text-main)', fontSize: '0.95rem' }}>Nuestro equipo analizará los datos y se pondrá en contacto contigo en breve con la valoración.</p>
+      <p style={{ color: 'var(--text-main)', fontSize: '0.95rem' }}>Nuestro equipo analizará los datos y <strong>te llamará por teléfono</strong> para verificar la información y darte la valoración.</p>
     </div>
   );
 
@@ -134,7 +134,8 @@ export default function ValuationWizard() {
               <input type="text" name="name" value={formData.name} onChange={handleInput} required placeholder="Introduce tu nombre" style={{ width: '100%', padding: '14px 10px', marginBottom: '15px', backgroundColor: 'var(--bg-dark)', color: 'var(--text-main)', border: '1px solid var(--border-color)' }} />
               <label className="amoforms-label">Email</label>
               <input type="email" name="email" value={formData.email} onChange={handleInput} required placeholder="tu@email.com" style={{ width: '100%', padding: '14px 10px', marginBottom: '15px', backgroundColor: 'var(--bg-dark)', color: 'var(--text-main)', border: '1px solid var(--border-color)' }} />
-              <label className="amoforms-label">Teléfono Móvil</label>
+              <label className="amoforms-label">Teléfono Móvil <span style={{ color: '#e74c3c' }}>*</span></label>
+              <p style={{ fontSize: '0.8rem', color: 'var(--accent-gold)', marginBottom: '10px', lineHeight: '1.4', opacity: 0.9 }}>📞 Nuestro equipo te llamará a este número para verificar tus datos y darte la valoración.</p>
               <div style={{ marginBottom: '25px' }}>
                 <PhoneInput international defaultCountry="ES" value={formData.phone} onChange={(v) => setFormData({...formData, phone: v})} required style={{ '--PhoneInput-color--focus': 'var(--accent-gold)' }} />
               </div>
